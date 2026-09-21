@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X-Tablet | Himalayan Salt Laxative</title>
+<meta name="description" content="X-Tablet — a natural laxative made from Himalayan salt and crushed Softlax powders. Relief for constipation and digestive discomfort.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0a0a0a;
+  --gold: #c9a84c;
+  --gold-light: #e4cc7a;
+  --gold-dark: #9a7a2e;
+  --cream: #f7f3ec;
+  --grey-warm: #2a2623;
+  --text-body: #3d3831;
+  --text-muted: #7a7265;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-body);
+  background: #fff;
+  line-height: 1.65;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.15; }
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── NAV ─── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.25rem 3rem;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.04em;
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem; font-weight: 400;
+  letter-spacing: 0.03em;
+  transition: color 0.25s;
+}
+
+.nav-links a:hover { color: var(--gold-light); }
+
+.nav-cta {
+  display: inline-block;
+  padding: 0.55rem 1.5rem;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 0.8rem; font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.25s;
+}
+
+.nav-cta:hover { background: var(--gold-light); }
+
+.mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+.mobile-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('images/hero-banner.jpg') center center / cover no-repeat;
+  opacity: 0.55;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  max-width: 680px;
+  padding: 2rem;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: var(--gold);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  border: none; border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: transparent;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ─── SECTION UTILITY ─── */
+.section { padding: 6rem 3rem; }
+.section-dark { background: var(--black); color: #fff; }
+.section-cream { background: var(--cream); }
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* ─── ABOUT ─── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-img {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.about-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.about-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.about-text h2 em { font-style: normal; color: var(--gold-dark); }
+
+.about-text p {
+  margin-bottom: 1rem;
+  max-width: 50ch;
+}
+
+.about-text p.lead { font-size: 1.05rem; color: var(--text-body); }
+.about-text p.muted { color: var(--text-muted); font-size: 0.95rem; }
+
+.ingredient-tags {
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.ingredient-tags span {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.8rem; font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 50px;
+  color: var(--gold-dark);
+}
+
+.ingredient-tags span::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ─── BENEFITS ─── */
+.benefits-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.benefits-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.benefits-header p {
+  color: rgba(255,255,255,0.5);
+  max-width: 48ch;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  transition: border-color 0.3s;
+}
+
+.benefit-card:hover { border-color: rgba(201,168,76,0.3); }
+
+.benefit-icon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(201,168,76,0.12);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.benefit-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem; font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* ─── LIFESTYLE ─── */
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.lifestyle-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 5/4;
+}
+
+.lifestyle-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.lifestyle-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.75) 0%, transparent 55%);
+  display: flex; align-items: flex-end;
+  padding: 2rem;
+}
+
+.lifestyle-overlay p {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 400;
+  max-width: 30ch;
+  line-height: 1.5;
+}
+
+.lifestyle-overlay p em {
+  font-style: normal;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.lifestyle-text {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.lifestyle-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.lifestyle-text p { color: var(--text-muted); max-width: 48ch; margin: 0 auto; }
+
+/* ─── CTA STRIP ─── */
+.cta-strip {
+  text-align: center;
+  padding: 5rem 3rem;
+  background: linear-gradient(135deg, #1a1510 0%, var(--black) 100%);
+}
+
+.cta-strip h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-strip h2 em { font-style: normal; color: var(--gold); }
+
+.cta-strip p {
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2rem;
+  max-width: 44ch;
+  margin-left: auto; margin-right: auto;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--black);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 3rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 700;
+  color: #fff; margin-bottom: 1rem;
+}
+
+.footer-logo span { color: var(--gold); }
+
+footer p {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.8rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display: none; }
+  .mobile-toggle { display: block; }
+  .nav { padding: 1rem 1.5rem; }
+  .section { padding: 4rem 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .lifestyle-grid { grid-template-columns: 1fr; }
+  .btn-outline { margin-left: 0; margin-top: 0.75rem; }
+  .hero-buttons { display: flex; flex-direction: column; align-items: center; gap: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-logo"><span>X</span>-Tablet</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#benefits">Benefits</a></li>
+    <li><a href="#lifestyle">Wellness</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Yours</a>
+  <button class="mobile-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Himalayan Salt + Softlax</div>
+    <h1>Relief, <em>naturally</em></h1>
+    <p class="hero-sub">A gentle laxative made from Himalayan salt and crushed Softlax powders. For constipation and unsettled stomachs — without the harshness.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Order Now</a>
+      <a href="#about" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="images/doctor.jpg" alt="Medical professional reviewing patient notes" loading="lazy">
+      </div>
+      <div class="about-text">
+        <h2>The <em>science</em> behind the capsule</h2>
+        <p class="lead">X-Tablet combines two trusted ingredients into a single black capsule with a distinctive golden band — Himalayan salt and crushed Softlax powders.</p>
+        <p class="muted">Himalayan salt draws water into the intestines, softening stool naturally. Softlax powders work alongside to ease passage and reduce discomfort. Together, they provide reliable relief without the cramping or urgency of harsher alternatives.</p>
+        <div class="ingredient-tags">
+          <span>Himalayan Salt</span>
+          <span>Softlax Powder</span>
+          <span>Gentle Formula</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="section section-dark" id="benefits">
+  <div class="container">
+    <div class="benefits-header">
+      <h2>Why people choose X-Tablet</h2>
+      <p>A straightforward solution to an everyday problem.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">&#9883;</div>
+        <h3>Eases constipation</h3>
+        <p>Draws water into the digestive tract to soften stool and promote natural, comfortable bowel movements.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10047;</div>
+        <h3>Settles upset stomachs</h3>
+        <p>The Himalayan salt mineral profile helps calm digestive discomfort and reduce that heavy, bloated feeling.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#9878;</div>
+        <h3>Natural ingredients</h3>
+        <p>No synthetic stimulants. Just Himalayan salt and Softlax powders — simple, mineral-based, and gentle on your system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lifestyle -->
+<section class="section section-cream" id="lifestyle">
+  <div class="container">
+    <div class="lifestyle-text">
+      <h2>Feel like yourself again</h2>
+      <p>Digestive trouble steals your energy and your comfort. X-Tablet gives it back.</p>
+    </div>
+    <div class="lifestyle-grid">
+      <div class="lifestyle-card">
+        <img src="images/happy-family.jpg" alt="Happy family enjoying time together" loading="lazy">
+        <div class="lifestyle-overlay">
+          <p>Be <em>present</em> with the people who matter, without the distraction of discomfort.</p>
+        </div>
+      </div>
+      <div class="lifestyle-card">
+        <img src="images/happy-people.jpg" alt="People enjoying an active day outdoors" loading="lazy">
+        <div class="lifestyle-overlay">
+          <p>Get back to <em>moving freely</em> and feeling light on your feet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip" id="contact">
+  <div class="container">
+    <h2>Ready for <em>relief</em>?</h2>
+    <p>Get in touch to order X-Tablet or ask any questions about the product.</p>
+    <a href="mailto:info@x-tablet.co.za" class="btn-primary">Contact Us</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo"><span>X</span>-Tablet</div>
+  <p>&copy; 2026 X-Tablet. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
